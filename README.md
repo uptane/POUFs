@@ -8,14 +8,14 @@ Created: 14-03-2019
 
 # Uptane Implementation Profiles
 
-This repository is the authoritative source for Uptane profile.
+This repository is the authoritative source for Uptane profiles.
 
 ## What is a Profile?
 
 A guiding principle of the Uptane framework is to give each implementer as much design flexibility as possible, acknowledging that Uptane needs to run on existing, often customized, software and hardware systems. For this reason, the framework does not specify data binding formats. Yet, this means Uptane can not guarantee Interoperability. To provide a way for two or more Uptane implementations to work together, the framework employs a mechanism called a profile. A profile precisely specifies the wireline format that any implementation using it must obey. Hence, implementations that use the same profile are able to interoperate. In particular, this can be important for ECU suppliers, so that they can have a detailed specification to work with.
 
 
-A profile contains all the information needed for a third party to design a compatible Uptane implementation. This includes the format and contents of all data transmitted on the wire. It functions like a layer placed over the existing Uptane specification, so certain requirements, such as filenames, file contents, and signatures, do not need to restated in the profile. The only restriction placed upon the creation of any profile is that it MUST NOT alter or violate anything defined in the Uptane specification.
+A profile contains all the information needed for a third party to design a compatible Uptane implementation. This includes the protocol and contents of all data transmitted on the wire as well as design choices that impact the functionality of the system. It functions like a layer placed over the existing Uptane specification, so certain requirements, such as filenames, file contents, and signatures, do not need to restated in the profile. The only restriction placed upon the creation of any profile is that it MUST NOT alter or violate anything defined in the Uptane specification.
 
 ## Adding profiles
 
@@ -38,8 +38,9 @@ A profile should include the following sections:
 * Uptane Version Implemented:
 * Created: <date created on, in dd-mmm-yyyy format>
 * Abstract -- The abstract provides a short overview of what the profile contains. This may include any encodings used or an overarching design philosophy. If the profile has been updated, the abstract should explain what is changed in the new version.
-* Design -- The design section contains a description of any design elements that differ from the Uptane specification. This section will not include the format of data, but will include all other elements of the profile. Any optional features (MAYs) of the Uptane specification used MUST be mentioned here, as well as any recommendations (SHOULDs) that are not followed. In addition, any feature added to the specification that  is needed for compatibility MUST be explained.
-* Data formats -- Data formats contain details about the encoding and format of Uptane data as transmitted. The encoding should describe how data is formatted when in transit between the repositories and ECUs. Data that is not transmitted does not need to be included in a profile. Descriptions of formats should include the order of fields to allow for bitwise identical implementations. Every bit of transmitted data MUST be accounted for in the profile. This section may include common formatting used by all metadata files to avoid redundancy. At a minimum, this section will include the format for the following data:
+* Design -- The design section contains a description of any design elements that differ from the Uptane specification. This section will not include the format of data, but will include all other elements of the profile. Any optional features (MAYs) of the Uptane specification used MUST be mentioned here, as well as any recommendations (SHOULDs) that are not followed. In addition, any feature added to the specification that is needed for compatibility MUST be explained.
+* Protocol -- The protocol used to transmit data should be described here. If relevant, the version of the protocol and any customizations should be explained so that any implementor will have a bitwise identical use of the protocol.
+* Data formats -- Data formats contain details about the encoding and format of Uptane data as transmitted. The encoding should describe how data is formatted when in transit between the repositories and ECUs. Data that is not transmitted does not need to be included in a profile. Descriptions of formats should include the order of fields to allow for bitwise identical implementations. Every bit of transmitted data MUST be accounted for in the profile. This section may include common formatting used by all metadata files to avoid redundancy. At a minimum, this section will include the format for the following data, including all fields required by the Uptane specification:
   * Root
   * Snapshot
   * Targets
@@ -49,7 +50,7 @@ A profile should include the following sections:
   * ECU metadata -- Each file that is transmitted should be described. In addition to the required files, the following may be included:
     * Time server communication
     * Repository mapping metadata
-    * Copyright -- Each profile MUST either be explicitly labeled as placed in the public domain (see this Profile as an example) or licensed under the [Open Publication License](https://opencontent.org/openpub/).
+* Copyright -- Each profile MUST either be explicitly labeled as placed in the public domain (see this Profile as an example) or licensed under the [Open Publication License](https://opencontent.org/openpub/).
 
 ### Workflow
 
