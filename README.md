@@ -7,7 +7,7 @@
 
 # Uptane Implementation POUFs
 
-This repository is the authoritative source for Uptane POUFs.
+This repository will contain links to Uptane POUFs.
 
 ## What is a POUF?
 
@@ -43,7 +43,7 @@ The abstract provides a short overview of what the POUF contains. This SHOULD in
 The protocol section will describe the communications over the network. This will include the protocol used to transmit data. If relevant, the version of the protocol and any customizations SHOULD be explained so that any implementor will have a bitwise identical use of the protocol. In addition, all messages that will be transmitted MUST be explained using a Message Handler Table. This table will include all messages that will be transmitted by the implementation. Each entry SHALL include at least the sender, receiver, data (including signatures), and the expected response.
 
 #### Operations
-The operations section contains a description of any design elements that differ from the Uptane specification. This section will not include the format of data, but will include all other elements of the POUF. Any MAYs and SHOULDs from the Uptane specification SHALL be described here. In addition, any optional features (MAYs) of the Uptane specification used MUST be justified, as well as any recommendations (SHOULDs) that are not followed. In addition, any feature added to the specification that is needed for compatibility MUST be explained.
+The operations section contains a description of any design elements that differ from the Uptane Standard. This section will not include the format of data, but will include all other elements of the POUF. Any MAYs and SHOULDs from the Uptane Standard SHALL be described here. In particular, any optional features (MAYs) or recommendations (SHOULDs) from the specification SHALL be mentioned with justification for why the feature was or was not used. In addition, any feature added to the specification that is needed for compatibility MUST be explained.
 
 #### Usage
 The usage section will contain a description of how the operators of the Uptane implementation manage keys and responsibilities of the system. This will include a description of how online and offline keys are managed and rotated, how the supply chain is managed, and how images are generated. In addition, it MUST include a Data Table that describes all data stored on each Uptane entity. This includes which keys are stored on each entity as well as any other required data. At a minimum, data stored on Primary ECUs, Secondary ECUs, the director repository, and the image repository MUST be described in the Data Table.
