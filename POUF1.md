@@ -17,7 +17,7 @@ The reference implementation includes all required and most optional features as
 # Protocols
 This POUF uses ASN.1/DER encoding for transmitting files. The details of the file formats are described in {Formats} in ASN.1 notation. Note that improper decoding of ASN.1 may lead to arbitrary code execution or Denial-of-Service attacks. Any implementers of this POUF should be aware of these attacks and use a decoder which has been subject to appropriate security analysis.
 
-The Primary ECU communicates with the Director repository, Image repository, and time server using http post requests over [XML-RPC](http://xmlrpc.scripting.com/spec.html). In this communication, the Primary ECU acts as an XML-RPC client and the Director repository, Image repository, and time server act as XML-RPC servers. The requests supported by these servers are described in the Message Handler Table.
+The Primary ECU communicates with the Director repository, Image repository, and time server using HTTP POST requests over [XML-RPC](http://xmlrpc.scripting.com/spec.html). In this communication, the Primary ECU acts as an XML-RPC client and the Director repository, Image repository, and time server act as XML-RPC servers. The requests supported by these servers are described in the Message Handler Table.
 
 This POUF does not specify communication between Primary and Secondary ECUs. This communication is left up to the implementer, but should follow the requirements of the standard. For more information about internal vehicle communication, see the [Deployment Considerations](https://uptane.github.io/deployment/introduction.html).
 
