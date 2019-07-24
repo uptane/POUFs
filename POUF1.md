@@ -75,7 +75,7 @@ Key management and image generation are not handled by this POUF. The POUF uses 
 
 ## Server Setup
 The Uptane Reference Implementation does the following setup before any updates can be installed:
-* The Director repository is initialized with the private keys for all roles with online keys. These keys are stored on the Director so they can be used to automatically sign valid metadata. Any offline keys should not be stored on the repository.
+* The Director repository is initialized with the private keys for all roles with online keys. These keys are stored on the Director so they can be used to automatically sign valid metadata. Any offline keys, for example the root key, should not be stored on the repository.
 * An inventory database is initialized on the Director repository. This database contains fields for vehicle manifests, ECU manifests, a mapping that associates vehicles to ECUs, and the ECU public keys. This database is used and updated during the update process.
 * ECUs register with the Director repository. Each ECU on a vehicle must register by sending its ECU id and ECU public key to the director repository. This information from registration is stored in the inventory database.
 * The timeserver is initialized with a timeserver private key.
