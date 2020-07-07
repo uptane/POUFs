@@ -76,7 +76,7 @@ What are the preconditions for installing an image? (https://uptane.github.io/pa
 
 Does the Primary write version reports to disk? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#create_version_report)
 
-Do full verification Secondaries check that all metadata from the Director and Image repositories match or is this check done on the Primary? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
+Which ECUs perform full verification? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
 
 Does the Primary ECU check that the Targets metadata from the Director repository only contains ECU ids present on the vehicle? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
 
