@@ -76,17 +76,17 @@ What are the preconditions for installing an image? (https://uptane.github.io/pa
 
 Does the Primary write version reports to disk? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#create_version_report)
 
-Do full verification Secondaries check that all metadata from the Director and Image repositories match? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
+Do full verification Secondaries check that all metadata from the Director and Image repositories match or is this check done on the Primary? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
 
 Does the Primary ECU check that the Targets metadata from the Director repository only contains ECU ids present on the vehicle? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#full_verification)
 
-Does the Root, Snapshot, Timestamp, or Targets metadata verification process differ from the suggestions in the Standard? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#check_root)
+Does the Root, Snapshot, Timestamp, or Targets metadata verification process have any steps in addition to those required in the Standard? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#check_root)
 
 # Usage
 
-What filesystem is used by the Image repository? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#image-repository)
+What kind of storage is used by the Image repository and which authorization mechanisms does it employ? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#image-repository)
 
-What filesystem is used by the Director repository? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#director_repository)
+What kind of storage is used by the Director repository and which authorization mechanisms does it employ? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#director_repository)
 
 What database system is used for the inventory database? (https://uptane.github.io/papers/ieee-isto-6100.1.0.0.uptane-standard.html#inventory_db)
 
